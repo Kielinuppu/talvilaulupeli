@@ -109,6 +109,26 @@ h1 {
 }
 
 @media (max-width: 660px) {
+    .game-board {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .bottom-row {
+        grid-column: 1 / span 2;
+        display: contents;
+    }
+
+    .bottom-row img {
+        width: 100%;
+    }
+
+    .bottom-row img:last-child {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        max-width: 100%;
+    }
+
     .stop-button {
         width: 130px;
         height: 130px;
